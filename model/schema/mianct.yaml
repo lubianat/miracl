@@ -1,13 +1,13 @@
 id: https://w3.org/mianct
-title: Minimal Information About a new Cell Type
-name: mianct
+title: Minimal Information Reporting About a Cell
+name: miracl
 license: https://creativecommons.org/publicdomain/zero/1.0/
 version: 0.0.1
 see_also:
   - https://docs.google.com/document/d/1EVgs2Z5dpJs7cbuSBwWlg1xOWQEqMtbSKRGgdneXnU8/edit#
 description: |-
 
-  This schema is CJM's attempt to translate Tiago's [minimal info doc](https://docs.google.com/document/d/1EVgs2Z5dpJs7cbuSBwWlg1xOWQEqMtbSKRGgdneXnU8/edit#) into a LinkML schema
+  This is a preliminary convertion of the Minimal Information Reporting About a Cell into a computer-readable, LinkML schema. 
 
   The schema is fairly minimal and is in the form of a "checklist" style schema. It is a set of fields mostly associated with this class:
 
@@ -15,11 +15,11 @@ description: |-
 
   There are a set of examples here:
 
-    * [tests/input](https://github.com/cmungall/mianct-schema/tree/main/tests/input)
+    * [tests/input](https://github.com/lubianat/miracl-schema/tree/main/tests/input)
 
   Currently the examples are YAML, but the YAML is deliberately flat as this is a "checklist" schema, and we could have TSV/CSV/xlsx here
 
-  TODO:
+  Future extensions:
 
     - include "packages" and "checklists"; e.g.
         - a neuron package would have the enum for morphologies constrained
@@ -27,7 +27,7 @@ description: |-
         - see [MIxS schema](https://cmungall.github.io/mixs-source/) for example of how this might work
     - document how this relates to dosdp/robot templates
     
-  When should one provide an entry for a cell type in a MIANCT sheet?
+  When should one provide an entry for a cell type in a MIRACL sheet?
 
    - When there is a claim of a new cell class (type or state) that has not been described before
    - When new information is discovered for a previously cataloged type that might influence its cataloguing (i.e. description of the presence in a different species or in a new location)
@@ -37,11 +37,11 @@ prefixes:
  linkml: https://w3id.org/linkml/
  biolink: https://w3id.org/biolink/vocab/
  sdo: https://schema.org/
- mianct: https://w3.org/mianct/
+ miracl: https://w3.org/miracl/
  UBERON: http://purl.obolibrary.org/obo/UBERON_
  CL: http://purl.obolibrary.org/obo/CL_
 
-default_prefix: mianct
+default_prefix: miracl
 default_curi_maps:
  - semweb_context
  - obo_context
@@ -51,7 +51,7 @@ imports:
 
 classes:
   CellType:
-    description: Minimal information about a cell type
+    description: Minimal Information Reporting About a Cell
     class_uri: CL:0000000
     slots:
       - id
