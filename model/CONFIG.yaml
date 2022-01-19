@@ -1,13 +1,14 @@
 model_organization: obophenotype   # Name of github individual organization where this cone exists (e.g. linkml / mygithub
-model_name: mianct           # Name of target repository (e.g. my-wonderful-model)
-root_schema: mianct  # the name of the base schema file (w/o .yaml) 
+model_name: miracl           # Name of target repository (e.g. my-wonderful-model)
+root_schema: miracl  # the name of the base schema file (w/o .yaml) 
 model_root_class: CellType   # <name of the base class in the schema for testing
 
 model_author: Chris Mungall             # Your name
 model_author_email: cjmungall@lbl.gov       # Your email
-model_synopsis:  Minimal Information About a new Cell Type     # One liner about the model
+model_synopsis:  Minimal Information Reporting About a Cell     # One liner about the model
 model_description: |-      # Longer description of the model
-  Schema for new cell type requests
+  Schema for new cell type requests on the Cell Ontology or plain reporting in biomedical publications.
+
 
 # Trove Classifiers (https://pypi.org/classifiers/) -- these can be omitted if the elemens below are sufficient
 classifiers:
