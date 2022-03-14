@@ -5,13 +5,13 @@
 # Model documentation and schema directory
 # ----------------------------------------
 SRC_DIR = model
-PKG_DIR = mianct
+PKG_DIR = miracl
 SCHEMA_DIR = $(SRC_DIR)/schema
 MODEL_DOCS_DIR = $(SRC_DIR)/docs
 SOURCE_FILES := $(shell find $(SCHEMA_DIR) -name '*.yaml')
 SCHEMA_NAMES = $(patsubst $(SCHEMA_DIR)/%.yaml, %, $(SOURCE_FILES))
 
-SCHEMA_NAME = mianct
+SCHEMA_NAME = miracl
 SCHEMA_SRC = $(SCHEMA_DIR)/$(SCHEMA_NAME).yaml
 PKG_TGTS = jsonld_context json_schema model
 TGTS = docs python $(PKG_TGTS)

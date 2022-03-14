@@ -2,4 +2,4 @@
 
 Schema for new cell type requests on the Cell Ontology or plain reporting in biomedical publications.
 
-## [Documentation](https://obophenotype.github.io/miracl/)
+## [Documentation](https://lubianat.github.io/miracl/)

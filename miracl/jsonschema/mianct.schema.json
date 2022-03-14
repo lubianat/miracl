@@ -1,5 +1,5 @@
 {
-   "$id": "https://w3.org/mianct",
+   "$id": "https://w3.org/miracl",
    "$schema": "http://json-schema.org/draft-07/schema#",
    "definitions": {
       "CellType": {
@@ -78,7 +78,7 @@
       }
    },
    "properties": {},
-   "title": "mianct",
+   "title": "miracl",
    "type": "object"
 }
 

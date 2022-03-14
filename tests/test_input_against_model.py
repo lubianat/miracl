@@ -3,16 +3,18 @@ import unittest
 
 from linkml_runtime.loaders import yaml_loader, json_loader, rdf_loader
 
-from mianct.mianct import CellType
+from miracl.miracl import CellType
 
 CWD = os.path.abspath(os.path.dirname(__file__))
-INPUT_DIR = os.path.join(CWD, 'input')
+INPUT_DIR = os.path.join(CWD, "input")
 
 
 class InputFileTestCase(unittest.TestCase):
-    """ Test the input files against the model"""
+    """Test the input files against the model"""
+
     def test_input_files(self):
-        """ Iterate over the input directory loading any test files """
+        """Iterate over the input directory loading any test files"""
+
         def gen_detail(total: int, passed: int, typ: str) -> str:
             return f"{total} {typ} files tested - {total-passed} failures"
 
@@ -25,19 +27,19 @@ class InputFileTestCase(unittest.TestCase):
                 full_fname = os.path.join(dpath, fname)
                 nread += 1
                 try:
-                    if fname.endswith('.yaml'):
+                    if fname.endswith(".yaml"):
                         nyaml += 1
                         o: CellType = yaml_loader.load(full_fname, CellType)
                         pyaml += 1
-                    elif fname.endswith('.json'):
+                    elif fname.endswith(".json"):
                         njson += 1
                         o: CellType = json_loader.load(full_fname, CellType)
                         pjson += 1
-                    elif fname.endswith('.ttl'):
+                    elif fname.endswith(".ttl"):
                         nttl += 1
                         o: CellType = rdf_loader.load(full_fname, CellType)
                         pttl += 1
-                    elif fname.endswith('.md'):
+                    elif fname.endswith(".md"):
                         pass
                     else:
                         nunk += 1
@@ -55,5 +57,5 @@ class InputFileTestCase(unittest.TestCase):
         self.assertEqual(0, nfailures)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -4,10 +4,12 @@ from setuptools import setup
 from warnings import warn
 
 if sys.version_info < (3, 7, 0):
-    warn(f"Python version 3.7 or later is required for mianct.  Current version: {sys.version_info}")
+    warn(
+        f"Python version 3.7 or later is required for miracl.  Current version: {sys.version_info}"
+    )
     sys.exit(1)
 
 setup(
-    setup_requires=['pbr'],
+    setup_requires=["pbr"],
     pbr=True,
 )
