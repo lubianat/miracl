@@ -57,6 +57,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#enums">Enums</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subsets">Subsets</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#built-in">Built in</a>
@@ -108,18 +110,20 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="miracl-schema">miracl schema</h1>
-<p>This schema is CJM's attempt to translate Tiago's <a href="https://docs.google.com/document/d/1EVgs2Z5dpJs7cbuSBwWlg1xOWQEqMtbSKRGgdneXnU8/edit#">minimal info doc</a> into a LinkML schema</p>
+                <h1 id="miracl">miracl</h1>
+<p><strong>metamodel version:</strong> 1.7.0</p>
+<p><strong>version:</strong> 0.0.1</p>
+<p>This is a preliminary convertion of the Minimal Information Reporting About a Cell into a computer-readable, LinkML schema. </p>
 <p>The schema is fairly minimal and is in the form of a "checklist" style schema. It is a set of fields mostly associated with this class:</p>
 <ul>
 <li><a href="CellType/">CellType</a></li>
 </ul>
 <p>There are a set of examples here:</p>
 <ul>
-<li><a href="https://github.com/cmungall/miracl-schema/tree/main/tests/input">tests/input</a></li>
+<li><a href="https://github.com/lubianat/miracl-schema/tree/main/tests/input">tests/input</a></li>
 </ul>
 <p>Currently the examples are YAML, but the YAML is deliberately flat as this is a "checklist" schema, and we could have TSV/CSV/xlsx here</p>
-<p>TODO:</p>
+<p>Future extensions:</p>
 <ul>
 <li>include "packages" and "checklists"; e.g.<ul>
 <li>a neuron package would have the enum for morphologies constrained</li>
@@ -129,7 +133,7 @@
 </li>
 <li>document how this relates to dosdp/robot templates</li>
 </ul>
-<p>When should one provide an entry for a cell type in a miracl sheet?</p>
+<p>When should one provide an entry for a cell type in a MIRACL sheet?</p>
 <ul>
 <li>When there is a claim of a new cell class (type or state) that has not been described before</li>
 <li>When new information is discovered for a previously cataloged type that might influence its cataloguing (i.e. description of the presence in a different species or in a new location)</li>
@@ -137,7 +141,7 @@
 </ul>
 <h3 id="classes">Classes</h3>
 <ul>
-<li><a href="CellType/">CellType</a> - Minimal information about a cell type</li>
+<li><a href="CellType/">CellType</a> - Minimal Information Reporting About a Cell</li>
 <li><a href="OrganismTaxon/">OrganismTaxon</a> - A classification of a set of organisms. Example instances: NCBITaxon:9606 (Homo sapiens), NCBITaxon:2 (Bacteria). Can also be used to represent strains or subspecies.</li>
 </ul>
 <h3 id="mixins">Mixins</h3>
@@ -161,6 +165,7 @@
 <li><a href="major_life_stage_enum/">major_life_stage_enum</a></li>
 <li><a href="morphology_enum/">morphology_enum</a></li>
 </ul>
+<h3 id="subsets">Subsets</h3>
 <h3 id="types">Types</h3>
 <h4 id="built-in">Built in</h4>
 <ul>
@@ -253,6 +258,6 @@
 </html>
 
 <!--
-MkDocs version : 1.2.1
-Build Date UTC : 2021-06-24 23:08:32.325426+00:00
+MkDocs version : 1.2.3
+Build Date UTC : 2022-03-14 18:29:06.304528+00:00
 -->

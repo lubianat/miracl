@@ -91,18 +91,54 @@
             <div class="section">
               
                 <h1 id="class-celltype">Class: CellType</h1>
-<p>Minimal information about a cell type</p>
+<p>Minimal Information Reporting About a Cell</p>
 <p>URI: <a href="https://w3.org/miracl/CellType">miracl:CellType</a></p>
-<p><img alt="img" src="http://yuml.me/diagram/nofunky;dir:TB/class/[CellType]&lt;develops%20into%200..*-%20[CellType&#124;id:string;label:string;organ_or_tissue:string%20%3F;taxon:string%20%3F;major_life_stage:major_life_stage_enum%20%3F;major_class:major_class_enum%20%3F;diagnostic_description:string%20%3F;morphology:morphology_enum%20%3F;previous_observations:narrative_text%20*],[CellType]&lt;develops%20from%200..1-%20[CellType]" /></p>
-<h2 id="referenced-by-class">Referenced by class</h2>
+<p><a href="https://yuml.me/diagram/nofunky;dir:TB/class/[CellType]&lt;develops%20into%200..*-%20[CellType&#124;id:string;label:string;organ_or_tissue:string%20%3F;taxon:string%20%3F;major_life_stage:major_life_stage_enum%20%3F;major_class:major_class_enum%20%3F;diagnostic_description:string%20%3F;morphology:morphology_enum%20%3F;previous_observations:narrative_text%20*],[CellType]&lt;develops%20from%200..1-%20[CellType]"><img alt="img" src="https://yuml.me/diagram/nofunky;dir:TB/class/[CellType]&lt;develops%20into%200..*-%20[CellType&#124;id:string;label:string;organ_or_tissue:string%20%3F;taxon:string%20%3F;major_life_stage:major_life_stage_enum%20%3F;major_class:major_class_enum%20%3F;diagnostic_description:string%20%3F;morphology:morphology_enum%20%3F;previous_observations:narrative_text%20*],[CellType]&lt;develops%20from%200..1-%20[CellType]" /></a></p>
+<h2 id="referenced-by-class">Referenced by Class</h2>
 <ul>
-<li><strong>None</strong> <em><a href="../develops_from/">develops from</a></em>  <sub>OPT</sub>  <strong><a href="./">CellType</a></strong></li>
+<li><strong>None</strong> <em><a href="../develops_from/">develops from</a></em>  <sub>0..1</sub>  <strong><a href="./">CellType</a></strong></li>
 <li><strong>None</strong> <em><a href="../develops_into/">develops into</a></em>  <sub>0..*</sub>  <strong><a href="./">CellType</a></strong></li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <h3 id="own">Own</h3>
 <ul>
-<li><a href="../develops_from/">develops from</a>  <sub>OPT</sub><ul>
+<li><a href="../id/">id</a>  <sub>1..1</sub><ul>
+<li>Range: <a href="../String/">String</a></li>
+</ul>
+</li>
+<li><a href="../label/">label</a>  <sub>1..1</sub><ul>
+<li>Description: The main label used to refer to a cell type</li>
+<li>Range: <a href="../String/">String</a></li>
+</ul>
+</li>
+<li><a href="../organ_or_tissue/">organ or tissue</a>  <sub>0..1</sub><ul>
+<li>Description: Cells of this type were identified in an organ of this kind.</li>
+<li>Range: <a href="../String/">String</a></li>
+</ul>
+</li>
+<li><a href="../taxon/">taxon</a>  <sub>0..1</sub><ul>
+<li>Description: Cells of this type were identified in an individual of this taxon. If the cell type is thought to be exclusive for that cell type, note it on the additional information field.</li>
+<li>Range: <a href="../String/">String</a></li>
+</ul>
+</li>
+<li><a href="../major_life_stage/">major life stage</a>  <sub>0..1</sub><ul>
+<li>Description: Cells of this type were identified at this stage</li>
+<li>Range: <a href="../major_life_stage_enum/">major_life_stage_enum</a></li>
+</ul>
+</li>
+<li><a href="../major_class/">major class</a>  <sub>0..1</sub><ul>
+<li>Range: <a href="../major_class_enum/">major_class_enum</a></li>
+</ul>
+</li>
+<li><a href="../diagnostic_description/">diagnostic description</a>  <sub>0..1</sub><ul>
+<li>Range: <a href="../String/">String</a></li>
+</ul>
+</li>
+<li><a href="../morphology/">morphology</a>  <sub>0..1</sub><ul>
+<li>Range: <a href="../morphology_enum/">morphology_enum</a></li>
+</ul>
+</li>
+<li><a href="../develops_from/">develops from</a>  <sub>0..1</sub><ul>
 <li>Range: <a href="./">CellType</a></li>
 </ul>
 </li>
@@ -110,44 +146,8 @@
 <li>Range: <a href="./">CellType</a></li>
 </ul>
 </li>
-<li><a href="../diagnostic_description/">diagnostic description</a>  <sub>OPT</sub><ul>
-<li>Range: <a href="../String/">String</a></li>
-</ul>
-</li>
-<li><a href="../id/">id</a>  <sub>REQ</sub><ul>
-<li>Range: <a href="../String/">String</a></li>
-</ul>
-</li>
-<li><a href="../label/">label</a>  <sub>REQ</sub><ul>
-<li>Description: The main label used to refer to a cell type</li>
-<li>Range: <a href="../String/">String</a></li>
-</ul>
-</li>
-<li><a href="../major_class/">major class</a>  <sub>OPT</sub><ul>
-<li>Range: <a href="../major_class_enum/">major_class_enum</a></li>
-</ul>
-</li>
-<li><a href="../major_life_stage/">major life stage</a>  <sub>OPT</sub><ul>
-<li>Description: Cells of this type were identified at this stage</li>
-<li>Range: <a href="../major_life_stage_enum/">major_life_stage_enum</a></li>
-</ul>
-</li>
-<li><a href="../morphology/">morphology</a>  <sub>OPT</sub><ul>
-<li>Range: <a href="../morphology_enum/">morphology_enum</a></li>
-</ul>
-</li>
-<li><a href="../organ_or_tissue/">organ or tissue</a>  <sub>OPT</sub><ul>
-<li>Description: Cells of this type were identified in an organ of this kind.</li>
-<li>Range: <a href="../String/">String</a></li>
-</ul>
-</li>
 <li><a href="../previous_observations/">previous observations</a>  <sub>0..*</sub><ul>
 <li>Range: <a href="../NarrativeText/">NarrativeText</a></li>
-</ul>
-</li>
-<li><a href="../taxon/">taxon</a>  <sub>OPT</sub><ul>
-<li>Description: Cells of this type were identified in an individual of this taxon. If the cell type is thought to be exclusive for that cell type, note it on the additional information field.</li>
-<li>Range: <a href="../String/">String</a></li>
 </ul>
 </li>
 </ul>
